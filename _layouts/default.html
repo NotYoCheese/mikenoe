@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    {% if site.favicon %}
+    <link rel="icon" type="image/x-icon" href="{{ site.favicon | relative_url }}">
+    {% endif %}
+</head>
+<body>
+    <header>
+        <nav>
+            <h1><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
+            <ul>
+                <li><a href="{{ '/about' | relative_url }}">About</a></li>
+                <li><a href="{{ '/blog' | relative_url }}">Blog</a></li>
+                {% if site.social_links.github %}
+                <li><a href="{{ site.social_links.github }}" target="_blank">GitHub</a></li>
+                {% endif %}
+                {% if site.social_links.linkedin %}
+                <li><a href="{{ site.social_links.linkedin }}" target="_blank">LinkedIn</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {{ content }}
+    </main>
+
+    <footer>
+        <p>&copy; {{ site.time | date: '%Y' }} {{ site.author }}. All rights reserved.</p>
+    </footer>
+
+    {% if site.google_analytics %}
+    <!-- Google Analytics script here -->
+    {% endif %}
+</body>
+</html>

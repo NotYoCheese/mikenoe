@@ -1,8 +1,9 @@
 ---
+published: false
 layout: post
 title: Jekyll Markdown
 date: 2021-11-04
-categories: ["jekyll", "Test Post", "first post"]
+categories: ["jekyll", "first post"]
 ---
 
 Text can be **bold**, _italic_, ~~strikethrough~~ or `keyword`
