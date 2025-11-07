@@ -3,6 +3,7 @@ layout: post
 title: LLMs are pretty good at programming LLMs
 date: 2025-11-07
 categories: ["AI", "LLM", "prompt engineering", "machine learning"]
+description: Using Claude to improve the prompts that Claude uses for data labeling. How recursive prompt engineering achieved 90%+ accuracy.
 ---
 
 I'm building a training data pipeline where an LLM labels samples for a DeBERTa-v3 model.

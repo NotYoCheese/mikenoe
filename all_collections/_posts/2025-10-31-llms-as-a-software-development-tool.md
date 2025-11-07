@@ -3,6 +3,7 @@ layout: post
 title: LLMs as a software development tool
 date: 2025-10-31
 categories: ["software engineering", "LLM", "AI", "developer tools"]
+description: Why LLMs can't replace developers but excel at boilerplate. A practical guide to using AI safely in production code.
 ---
 
 LLMs can write code faster than me.
