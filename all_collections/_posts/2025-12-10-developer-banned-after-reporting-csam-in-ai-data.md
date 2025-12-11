@@ -3,6 +3,9 @@ layout: post
 title: Developer Banned After Reporting CSAM in AI Data
 date: 2025-12-10
 categories: ["ai", "ethics"]
+mastodon_host: mastodon.social
+mastodon_user: mikenoe
+mastodon_id: 115703398596119400
 ---
 As an AI developer who often uses public data sets for various purposes, I find this terrifying:
 
