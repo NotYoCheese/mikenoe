@@ -258,3 +258,237 @@ main {
     padding: 1.5rem;
   }
 }
+
+/* Mastodon Comments */
+
+.mastodon-comments {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--gray-3);
+}
+
+.mastodon-comments h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--white-1);
+}
+
+.mastodon-comment-info {
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  color: var(--white-2);
+}
+
+.mastodon-comment-info a {
+  color: cyan;
+  border-bottom: 1px solid cyan;
+}
+
+.load-comments-btn {
+  background: var(--gray-3);
+  color: var(--white-2);
+  border: 1px solid var(--gray-4);
+  padding: 0.6rem 1.5rem;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  transition: background 0.2s ease;
+}
+
+.load-comments-btn:hover {
+  background: var(--gray-4);
+}
+
+.load-comments-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+#mastodon-comments-list {
+  margin-top: 1.5rem;
+}
+
+.mastodon-comment {
+  background: var(--gray-3);
+  border: 1px solid var(--gray-4);
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.mastodon-comment.author-comment {
+  border-left: 3px solid cyan;
+}
+
+.comment-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.comment-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.comment-author-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.comment-author {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--white-1);
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+.comment-author:hover {
+  text-decoration: underline;
+}
+
+.author-badge {
+  background: cyan;
+  color: var(--gray-6);
+  padding: 0.1rem 0.5rem;
+  border-radius: 3px;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+.comment-username {
+  display: block;
+  color: var(--gray-4);
+  font-size: 0.8rem;
+}
+
+.comment-date {
+  color: var(--gray-4);
+  font-size: 0.75rem;
+  white-space: nowrap;
+  margin-left: auto;
+}
+
+.comment-content {
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+  color: var(--white-2);
+}
+
+.comment-content p {
+  margin-bottom: 0.5rem;
+}
+
+.comment-content a {
+  color: cyan;
+  text-decoration: underline;
+}
+
+.comment-footer {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.8rem;
+}
+
+.comment-link {
+  color: var(--gray-4);
+  text-decoration: none;
+}
+
+.comment-link:hover {
+  color: cyan;
+  text-decoration: underline;
+}
+
+.replies-count {
+  color: var(--gray-4);
+}
+
+.no-comments,
+.error-message {
+  color: var(--gray-4);
+  font-style: italic;
+  padding: 1rem;
+  text-align: center;
+}
+
+.error-message {
+  color: #ff6b6b;
+}
+
+/* Light mode overrides for Mastodon comments */
+@media (prefers-color-scheme: light) {
+  .mastodon-comment-info a {
+    color: #1ebaba;
+    border-bottom: 1px solid #1ebaba;
+  }
+
+  .author-badge {
+    background: #1ebaba;
+  }
+
+  .comment-content a {
+    color: #1ebaba;
+  }
+
+  .comment-link:hover {
+    color: #1ebaba;
+  }
+
+  .mastodon-comment.author-comment {
+    border-left: 3px solid #1ebaba;
+  }
+}
+
+[data-theme="light"] {
+  .mastodon-comment-info a {
+    color: #1ebaba;
+    border-bottom: 1px solid #1ebaba;
+  }
+
+  .author-badge {
+    background: #1ebaba;
+  }
+
+  .comment-content a {
+    color: #1ebaba;
+  }
+
+  .comment-link:hover {
+    color: #1ebaba;
+  }
+
+  .mastodon-comment.author-comment {
+    border-left: 3px solid #1ebaba;
+  }
+}
+
+[data-theme="dark"] {
+  .mastodon-comment-info a {
+    color: cyan;
+    border-bottom: 1px solid cyan;
+  }
+
+  .author-badge {
+    background: cyan;
+  }
+
+  .comment-content a {
+    color: cyan;
+  }
+
+  .comment-link:hover {
+    color: cyan;
+  }
+
+  .mastodon-comment.author-comment {
+    border-left: 3px solid cyan;
+  }
+}

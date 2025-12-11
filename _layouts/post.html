@@ -15,6 +15,26 @@
           </div>
         </div>
         <div class="content">{{content}}</div>
+
+        {% if page.mastodon_host and page.mastodon_user and page.mastodon_id %}
+        <div class="mastodon-comments">
+          <h3>Comments</h3>
+          <p class="mastodon-comment-info">
+            You can comment on this post by replying to
+            <a href="https://{{page.mastodon_host}}/@{{page.mastodon_user}}/{{page.mastodon_id}}" target="_blank">this Mastodon post</a>.
+          </p>
+          <button id="load-comments" class="load-comments-btn">Load Comments</button>
+          <div id="mastodon-comments-list"></div>
+        </div>
+
+        <script>
+          const mastodonHost = "{{ page.mastodon_host }}";
+          const mastodonUser = "{{ page.mastodon_user }}";
+          const mastodonId = "{{ page.mastodon_id }}";
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.6/dist/purify.min.js"></script>
+        <script src="{{ '/assets/js/mastodon-comments.js' | relative_url }}"></script>
+        {% endif %}
       </section>
       {% include footer.html %}
     </main>
