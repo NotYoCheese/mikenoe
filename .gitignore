@@ -5,3 +5,9 @@ _site
 vendor
 # macOS
 .DS_Store
+
+# Environment variables (contains Mastodon API token)
+.env
+
+# Ignore virtual environment
+venv/
