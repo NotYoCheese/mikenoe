@@ -4,15 +4,39 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+<style>
+.about-illustration {
+  float: right;
+  max-width: 280px;
+  margin: 0 0 1.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+@media screen and (max-width: 600px) {
+  .about-illustration {
+    float: none;
+    display: block;
+    max-width: 100%;
+    margin: 0 auto 1.5rem auto;
+  }
+}
+</style>
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+<img src="{{ '/assets/images/mike-and-ginger.jpeg' | relative_url }}" alt="Illustration of Mike and his dog Ginger gaming by the fireplace" class="about-illustration" />
 
+Hey, I'm Mike. I'm a software engineer and technology leader with over 30 years of experience building systems at startups and enterprises alike.
 
-[jekyll-organization]: https://github.com/jekyll
+That's me and my dog Ginger in our natural habitat — controller in hand, fire going, her making sure I never game alone.
+
+These days I'm deep in the world of AI and large language models — not just using them, but studying how to use them *well*. I write about prompt engineering, LLMs, and lessons learned from decades of scaling teams and systems.
+
+I believe the best way to understand new technology is to build with it, break it, and write about what you find. That's what this site is for.
+
+---
+
+**Find me elsewhere:**
+
+- [LinkedIn](https://www.linkedin.com/in/mike-j-noe/)
+- [Mastodon](https://mastodon.social/@mikenoe)
+- [GitHub](https://github.com/NotYoCheese)
