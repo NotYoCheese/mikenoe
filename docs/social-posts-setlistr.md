@@ -42,14 +42,12 @@ Blog post with more details: https://mikenoe.com/posts/setlistr/
 
 I built the concert prep app I've wanted for years.
 
-SetListr connects setlist.fm to Apple Music. Search any artist, browse their setlists, and create playlists with one tap. It even generates "concert prep" playlists based on what a band has actually been playing lately.
+SetListr connects setlist.fm to Apple Music. Browse any artist's setlists and create playlists with one tap. It generates prep playlists based on what a band has actually been playing lately.
 
-Niche? Absolutely. But if you're the type who researches setlists before a show, this is for you.
-
-Beta on TestFlight now: setlistr.app
+Beta on TestFlight: setlistr.app
 
 Blog post: https://mikenoe.com/posts/setlistr/
 
-Spotify support is on the roadmap — let me know if you're interested.
+Spotify support coming — let me know if you're interested.
 
-#LiveMusic #AppleMusic #iOS #IndieApp #Concerts
+#LiveMusic #AppleMusic #iOS #Concerts
