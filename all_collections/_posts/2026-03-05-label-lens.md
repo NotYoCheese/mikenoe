@@ -4,6 +4,9 @@ title: "I Built a Tool to Find the Problems in My Training Data"
 date: 2026-03-05
 categories: ["Machine Learning", "Data Quality", "Side Project"]
 description: "LabelLens analyzes labeled text classification datasets for duplicates, mislabels, and class imbalance — and it already found real issues in my own data."
+mastodon_host: mastodon.social
+mastodon_user: mikenoe
+mastodon_id: 116178546287303784
 ---
 
 I've been working on a text classification pipeline for IAB content categorization. Tens of thousands of labeled web pages, hundreds of categories. The kind of dataset where problems hide in plain sight.
