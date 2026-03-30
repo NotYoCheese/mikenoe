@@ -37,6 +37,6 @@ I believe the best way to understand new technology is to build with it, break i
 
 **Find me elsewhere:**
 
-- [LinkedIn](https://www.linkedin.com/in/mike-j-noe/)
-- [Mastodon](https://mastodon.social/@mikenoe)
-- [GitHub](https://github.com/NotYoCheese)
+- <a href="https://www.linkedin.com/in/mike-j-noe/" rel="me">LinkedIn</a>
+- <a href="https://mastodon.social/@mikenoe" rel="me">Mastodon</a>
+- <a href="https://github.com/NotYoCheese" rel="me">GitHub</a>
