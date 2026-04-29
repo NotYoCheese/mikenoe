@@ -80,23 +80,30 @@ class PostPublisher:
         return frontmatter, body
 
     def _generate_post_url(self, frontmatter):
-        """Generate the post URL based on Jekyll permalink structure."""
-        title = frontmatter.get('title', '')
-        date = frontmatter.get('date')
+        """Generate the post URL using Jekyll's resolution order:
+        explicit frontmatter permalink -> filename slug -> title slug."""
+        # 1. Explicit permalink in frontmatter wins (matches Jekyll behavior).
+        if frontmatter.get('permalink'):
+            return f"{self.site_url}{frontmatter['permalink']}"
 
-        # Convert title to slug (lowercase, replace spaces with hyphens)
-        slug = re.sub(r'[^\w\s-]', '', title.lower())
-        slug = re.sub(r'[-\s]+', '-', slug).strip('-')
+        # 2. Derive slug from filename (the part after the YYYY-MM-DD prefix).
+        #    This matches what Jekyll's :title token resolves to by default.
+        filename_match = re.match(r'^\d{4}-\d{2}-\d{2}-(.+)$', self.post_path.stem)
+        if filename_match:
+            slug = filename_match.group(1)
+        else:
+            # 3. Last resort: slugify the title field.
+            title = frontmatter.get('title', '')
+            slug = re.sub(r'[^\w\s-]', '', title.lower())
+            slug = re.sub(r'[-\s]+', '-', slug).strip('-')
 
-        # Use permalink pattern from config (default: /posts/:title/)
+        # Use permalink pattern from config (default: /posts/:title/).
         permalink = self.config.get('defaults', [{}])[0].get('values', {}).get('permalink', '/posts/:title/')
-
-        # Replace permalink variables
         url_path = permalink.replace(':title', slug)
 
+        date = frontmatter.get('date')
         if isinstance(date, str):
             date = datetime.strptime(date, '%Y-%m-%d')
-
         url_path = url_path.replace(':year', str(date.year))
         url_path = url_path.replace(':month', f'{date.month:02d}')
         url_path = url_path.replace(':day', f'{date.day:02d}')
