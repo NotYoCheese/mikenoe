@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 480" role="img" aria-labelledby="m22-title m22-desc" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 680px; height: auto;">
+  <title id="m22-title">Fingerprint by IP 2x2 experiment</title>
+  <desc id="m22-desc">Two by two matrix comparing baseline requests vs curl_cffi on local M1 (residential IP) vs Hetzner Cloud (datacenter IP). Cells show success rates: baseline-local 37.3%, baseline-hetzner 39.3%, curl_cffi-local 76.6%, curl_cffi-hetzner 68.3%. Fingerprint is the dominant axis with deltas of +29 to +39 percentage points; IP reputation contributes 2 to 8 percentage points depending on whether fingerprint is clean.</desc>
+  <defs>
+    <marker id="m22-arrow-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#0F6E56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="m22-arrow-gray" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#888780" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="m22-arrow-pink" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#993556" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <!-- Caption -->
+  <text x="340" y="40" font-size="14" font-weight="500" text-anchor="middle" fill="#2C2C2A">Success rate by TLS fingerprint and egress IP</text>
+
+  <!-- Top axis label and column headers -->
+  <text x="340" y="78" font-size="12" text-anchor="middle" fill="#5F5E5A">TLS fingerprint</text>
+
+  <text x="220" y="108" font-size="12" text-anchor="middle" fill="#2C2C2A">baseline (requests)</text>
+  <text x="500" y="108" font-size="12" text-anchor="middle" fill="#2C2C2A">curl_cffi (chrome131)</text>
+
+  <!-- Row labels (left axis) -->
+  <text x="80" y="290" font-size="12" text-anchor="middle" fill="#5F5E5A" transform="rotate(-90, 80, 290)">Egress IP</text>
+
+  <text x="105" y="218" font-size="12" text-anchor="end" fill="#2C2C2A">local M1</text>
+  <text x="105" y="234" font-size="12" text-anchor="end" fill="#5F5E5A">(residential)</text>
+
+  <text x="105" y="358" font-size="12" text-anchor="end" fill="#2C2C2A">Hetzner</text>
+  <text x="105" y="374" font-size="12" text-anchor="end" fill="#5F5E5A">(datacenter)</text>
+
+  <!-- Cell: baseline_local (gray, low) -->
+  <rect x="120" y="160" width="200" height="120" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5"/>
+  <text x="220" y="216" font-size="22" font-weight="500" text-anchor="middle" dominant-baseline="central" fill="#2C2C2A">37.3%</text>
+  <text x="220" y="248" font-size="12" text-anchor="middle" dominant-baseline="central" fill="#5F5E5A">baseline_local</text>
+
+  <!-- Cell: curl_cffi_local (teal, high) -->
+  <rect x="360" y="160" width="200" height="120" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text x="460" y="216" font-size="22" font-weight="500" text-anchor="middle" dominant-baseline="central" fill="#085041">76.6%</text>
+  <text x="460" y="248" font-size="12" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">curl_cffi_local</text>
+
+  <!-- Cell: baseline_hetzner (gray, low) -->
+  <rect x="120" y="300" width="200" height="120" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5"/>
+  <text x="220" y="356" font-size="22" font-weight="500" text-anchor="middle" dominant-baseline="central" fill="#2C2C2A">39.3%</text>
+  <text x="220" y="388" font-size="12" text-anchor="middle" dominant-baseline="central" fill="#5F5E5A">baseline_hetzner</text>
+
+  <!-- Cell: curl_cffi_hetzner (teal, high but lower) -->
+  <rect x="360" y="300" width="200" height="120" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text x="460" y="356" font-size="22" font-weight="500" text-anchor="middle" dominant-baseline="central" fill="#085041">68.3%</text>
+  <text x="460" y="388" font-size="12" text-anchor="middle" dominant-baseline="central" fill="#0F6E56">curl_cffi_hetzner</text>
+
+  <!-- Horizontal deltas (fingerprint effect, big & green) -->
+  <line x1="320" y1="220" x2="358" y2="220" stroke="#0F6E56" stroke-width="1.5" marker-end="url(#m22-arrow-green)"/>
+  <text x="340" y="208" font-size="12" font-weight="500" text-anchor="middle" fill="#0F6E56">+39.3</text>
+
+  <line x1="320" y1="360" x2="358" y2="360" stroke="#0F6E56" stroke-width="1.5" marker-end="url(#m22-arrow-green)"/>
+  <text x="340" y="348" font-size="12" font-weight="500" text-anchor="middle" fill="#0F6E56">+29.0</text>
+
+  <!-- Vertical deltas (IP effect, smaller) -->
+  <line x1="220" y1="282" x2="220" y2="298" stroke="#888780" stroke-width="1.5" marker-end="url(#m22-arrow-gray)"/>
+  <text x="240" y="294" font-size="12" text-anchor="start" fill="#888780">+2.0</text>
+
+  <line x1="460" y1="282" x2="460" y2="298" stroke="#993556" stroke-width="1.5" marker-end="url(#m22-arrow-pink)"/>
+  <text x="480" y="294" font-size="12" text-anchor="start" fill="#993556">−8.3</text>
+
+  <!-- Footer takeaways -->
+  <text x="340" y="448" font-size="12" text-anchor="middle" fill="#5F5E5A">Fingerprint mimicry: +29 to +39 pp regardless of IP. IP reputation: ~2 pp without clean fingerprint, ~8 pp with it.</text>
+</svg>
