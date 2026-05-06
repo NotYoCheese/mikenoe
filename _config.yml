@@ -1,5 +1,5 @@
 lsi: false
-safe: true
+safe: false
 incremental: false
 highlighter: rouge
 baseurl: ""
@@ -10,6 +10,7 @@ kramdown:
   syntax_highlighter: rouge
 
 title: Mike Noe
+url: https://mikenoe.com
 markdown: kramdown
 
 # for atom feed
@@ -34,7 +35,7 @@ defaults:
     values:
       layout: "post"
       permalink: /posts/:title/
-exclude: ["sitemap.xml", "feed.xml", "LICENSE", "README.md"]
+exclude: ["LICENSE", "README.md"]
 
 social_links:
   linkedin: https://www.linkedin.com/in/mike-j-noe/
