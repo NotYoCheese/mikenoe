@@ -35,7 +35,19 @@ defaults:
     values:
       layout: "post"
       permalink: /posts/:title/
-exclude: ["LICENSE", "README.md"]
+exclude:
+  - LICENSE
+  - README.md
+  - CLAUDE.md
+  - scripts
+  - docs
+  - requirements.txt
+  - venv
+  - .env
+  - .claude
+  - .mcp.json
+  - Gemfile
+  - Gemfile.lock
 
 social_links:
   linkedin: https://www.linkedin.com/in/mike-j-noe/
